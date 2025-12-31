@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Movie Explorer</title>
+		<link rel="stylesheet" href="styles.css">
+		<script src="index.js"></script>
+	<body>
+		<div class="header">
+			<h1>Movies</h1>
+			<a href="settings.html">Settings</a>
+		</div>
+		<div class="search">
+			<form>
+				<input type="text" id="search-string" name="search">
+				<input type="submit" value="Search">
+			</form>
+			<div id="search-results">
+				<template id="search-result-template">
+					<div class="search-result">
+						<img>
+						<label id="original-title"></label>
+					</div>
+					<hr>
+				</template>
+			</div>
+		</div>
+	</body>
+</html>
+
