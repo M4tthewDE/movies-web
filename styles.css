@@ -43,3 +43,7 @@ hr {
 	margin-bottom: 1em;
 	align-self: stretch;
 }
+
+#search-result-error {
+	color: red;
+}
