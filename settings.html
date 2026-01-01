@@ -6,15 +6,21 @@
 		<title>Movie Explorer</title>
 		<link rel="stylesheet" href="styles.css">
 		<script src="settings.js"></script>
+		<script src="util.js"></script>
 	</head>
 	<body>
 		<div class="header">
 			<h1>Settings</h1>
 			<a href="index.html">Home</a>
 		</div>
-		<label>TMDB api key:</label><br>
-		<input id="tmdb-api-key-input" type="text"><br>
-		<button id="save-settings-button">Save</button>
+		<div id="settings">
+			<label>TMDB api key:</label><br>
+			<input id="tmdb-api-key-input" type="text"><br>
+			<button id="save-settings-button">Save</button>
+			<template id="save-settings-result-template">
+				<label id="search-settings-result"></label>
+			</template>
+		</div>
 	</body>
 </html>
 
