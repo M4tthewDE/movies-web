@@ -30,6 +30,8 @@ img {
 	width: 120px;
 	height: 180px;
 	margin-right: 1em;
+	border-style: solid;
+	border-color: gray;
 }
 
 .search-result {
