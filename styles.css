@@ -26,18 +26,6 @@ label {
 	flex-direction: column;
 }
 
-img {
-	width: 120px;
-	height: 180px;
-	margin-right: 1em;
-	border-style: solid;
-	border-color: gray;
-}
-
-.search-result {
-	display: flex;
-}
-
 hr {
 	margin-left: 0;
 	margin-right: 0;
@@ -58,4 +46,27 @@ hr {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+}
+
+.search-result {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	justify-content: start;
+}
+
+#original-title {
+	font-weight: bold;
+}
+
+#release-date {
+	color: gray;
+}
+
+#poster {
+	width: 120px;
+	height: 180px;
+	margin-right: 1em;
+	border-style: solid;
+	border-color: gray;
+	grid-row: span 2;
 }

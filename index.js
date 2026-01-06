@@ -25,15 +25,26 @@ async function search(searchString) {
 	const template = document.querySelector("#search-result-template");
 
 	resp.results.forEach(element => {
+		console.log(element);
+
 		const clone = document.importNode(template.content, true);
-		let img = clone.querySelector("img");
+		let img = clone.querySelector("#poster");
 		if (element.poster_path) {
 			img.setAttribute("src", "https://image.tmdb.org/t/p/w600_and_h900_face/" + element.poster_path);
 		} else {
 			img.setAttribute("src", "https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg");
 		}
-		let label = clone.querySelector("label");
-		label.innerText = element.original_title;
+
+		clone.querySelector("#original-title").innerText = element.original_title;
+
+		if (element.release_date) {
+			clone.querySelector("#release-date").innerText = "(" + element.release_date + ")";
+		}
+
+		if (element.overview) {
+			clone.querySelector("#overview").innerText = element.overview;
+		}
+
 		searchResults.appendChild(clone);
 	});
 }
